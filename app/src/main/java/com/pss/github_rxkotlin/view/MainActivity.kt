@@ -18,6 +18,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     }
 
     fun clickSearchBtn(view: View){
-        mainViewModel.getUserInfo("ParkSangSun1")
+        mainViewModel.getUserInfo(binding.name.text.toString())
     }
 }
