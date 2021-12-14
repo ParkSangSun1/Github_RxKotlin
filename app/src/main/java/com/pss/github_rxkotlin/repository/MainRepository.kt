@@ -1,4 +1,4 @@
-package com.pss.quick_setup.repository
+package com.pss.github_rxkotlin.repository
 
 import javax.inject.Inject
 

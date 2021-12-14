@@ -1,6 +1,6 @@
-package com.pss.quick_setup.di
+package com.pss.github_rxkotlin.di
 
-import com.pss.quick_setup.repository.MainRepository
+import com.pss.github_rxkotlin.repository.MainRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
