@@ -1,5 +1,6 @@
 package com.pss.github_rxkotlin.view
 
+import android.view.View
 import androidx.activity.viewModels
 import com.pss.github_rxkotlin.R
 import com.pss.github_rxkotlin.base.BaseActivity
@@ -13,6 +14,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
 
     override fun init() {
+        binding.activity = this
+    }
 
+    fun clickSearchBtn(view: View){
+        mainViewModel.getUserInfo("ParkSangSun1")
     }
 }
