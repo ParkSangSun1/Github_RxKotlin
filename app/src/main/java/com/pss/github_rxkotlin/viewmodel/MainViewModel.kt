@@ -18,7 +18,7 @@ class MainViewModel @Inject constructor(
 
     fun getUserInfo(owner: String) = mainRepository.getUserInfo(owner)
         .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
+        .observeOn(Schedulers.io())
         .subscribe({ items ->
             items.forEach { println(it) }
         }, { e ->
