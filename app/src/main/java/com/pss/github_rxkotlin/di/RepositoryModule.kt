@@ -1,5 +1,6 @@
 package com.pss.github_rxkotlin.di
 
+import com.pss.github_rxkotlin.data.remote.api.GithubApi
 import com.pss.github_rxkotlin.repository.MainRepository
 import dagger.Module
 import dagger.Provides
@@ -14,6 +15,6 @@ class RepositoryModule {
     @Provides
     @Singleton
     fun provideMainRepository(
-
-    ) = MainRepository()
+        githubApi: GithubApi
+    ) = MainRepository(githubApi)
 }
