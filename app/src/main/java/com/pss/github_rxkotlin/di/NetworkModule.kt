@@ -1,5 +1,6 @@
 package com.pss.github_rxkotlin.di
 
+import com.pss.github_rxkotlin.data.remote.api.GithubApi
 import com.pss.github_rxkotlin.widget.utils.Utils.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -52,9 +53,9 @@ object NetworkModule {
     private fun getLoggingInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
-/*    @Provides
+    @Provides
     @Singleton
-    fun provideSampleApiService(retrofit: Retrofit): SampleApi {
-        return retrofit.create(SampleApi::class.java)
-    }*/
+    fun provideGithubApiService(retrofit: Retrofit): GithubApi {
+        return retrofit.create(GithubApi::class.java)
+    }
 }
